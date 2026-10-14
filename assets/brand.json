@@ -1,0 +1,6 @@
+{
+  "_nota": "Colori Oficina. primary = nero (testi, Titolo 1, elenchi, bordi); accent = rosso del logo (SOLO filetti e riquadro Attenzione); secondary = blu (titoli di capitolo e sezione, intestazioni di tabella, riquadro Da ricordare, qualifica in copertina). Niente grigi.",
+  "primary": "000000",
+  "accent": "E30613",
+  "secondary": "0057B8"
+}
