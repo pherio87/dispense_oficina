@@ -5,7 +5,7 @@ Uso:  python check_dispensa.py dispensa.docx [--veloce] [--brand ../assets/brand
 
 --veloce salta il rendering in PDF (più rapido): restano i controlli sul file.
 
-Controlli sul file (XML): A4, margini 1,27 cm (stretti), un solo font, misure ammesse (12/16/20 pt; 10 pt nel riquadro Competenze),
+Controlli sul file (XML): A4, margini 2 cm, un solo font, misure ammesse (12/16/20 pt; 10 pt nel riquadro Competenze),
 nessun grigio, immagini entro i margini e con testo alternativo.
 Riquadro Competenze in ogni unità (avviso se manca; errore se ha codici inesistenti).
 Controlli sul rendering (PDF via LibreOffice): unità e capitoli in cima a una pagina nuova, didascalie sulla stessa pagina dell'immagine, esercizi spezzati (da tenere rari).
@@ -41,8 +41,8 @@ for i, s in enumerate(sects, 1):
     pg = re.search(r'<w:pgSz w:w="(\d+)" w:h="(\d+)"', s)
     mar = dict(re.findall(r'w:(top|right|bottom|left|header|footer)="(\d+)"', re.search(r"<w:pgMar[^>]*>", s).group(0)))
     if (pg.group(1), pg.group(2)) != ("11906", "16838"): ko(f"sezione {i}: pagina non A4"); good = False
-    if any(abs(int(mar[k]) - 720) > 3 for k in ("top", "right", "bottom", "left")): ko(f"sezione {i}: margini diversi da 1,27 cm {mar}"); good = False
-if good: ok("A4, margini 1,27 cm (stretti)")
+    if any(abs(int(mar[k]) - 1134) > 3 for k in ("top", "right", "bottom", "left")): ko(f"sezione {i}: margini diversi da 2 cm {mar}"); good = False
+if good: ok("A4, margini 2 cm")
 
 print("Caratteri e colori")
 fonts = sorted(set(re.findall(r'w:ascii="([^"]+)"', allxml)))
@@ -66,8 +66,8 @@ ok(f"colori usati: {sorted(colors)}") if not greys and not other else ko(f"color
 
 print("Immagini")
 exts = re.findall(r'<wp:extent cx="(\d+)" cy="(\d+)"', doc)
-wide = [round(int(cx) / 360000, 1) for cx, cy in exts if int(cx) > 6645910 + 3600]
-ok(f"{len(exts)} immagini, tutte entro i 18,4 cm di larghezza utile") if not wide else ko(f"immagini oltre i margini (cm): {wide}")
+wide = [round(int(cx) / 360000, 1) for cx, cy in exts if int(cx) > 6120130 + 3600]
+ok(f"{len(exts)} immagini, tutte entro i 17 cm di larghezza utile") if not wide else ko(f"immagini oltre i margini (cm): {wide}")
 noalt = len(re.findall(r'<wp:docPr [^>]*?(?<!descr)/?>', doc)) - len(re.findall(r'<wp:docPr [^>]*descr="[^"]+"', doc))
 fname_alt = len(re.findall(r'<wp:docPr [^>]*descr="[^"]*\.(?:png|jpe?g)"', doc))
 if noalt > 0: ko(f"{noalt} immagini senza testo alternativo")

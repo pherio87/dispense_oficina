@@ -23,7 +23,7 @@ Servono Node con il pacchetto `docx` (`npm i -g docx` se manca), `pandoc` e Libr
 
 | Cosa | Regola |
 |---|---|
-| Pagina | A4, margini stretti 1,27 cm. Nessuna copertina, intestazione o piè di pagina |
+| Pagina | A4, margini 2 cm su tutti i lati. Nessuna copertina, intestazione o piè di pagina |
 | Carattere | Solo Arial: **10 pt** solo per capacità e conoscenze del riquadro Competenze; **12 pt** testo, elenchi, tabelle, didascalie; **16 pt** intestazioni (`##` capitolo in blu, `###` sezione in nero); **20 pt** titoli e unità (`#`) con filetto rosso |
 | Pagine | `#` e `##` sempre in cima a una pagina nuova |
 | Colori | Nero, bianco, blu #0057B8, rosso #E30613. **Mai grigi.** Rosso solo per il filetto delle unità e il riquadro Attenzione; elenchi sempre neri; blu per capitoli, intestazioni di tabella e riquadro Da ricordare |
@@ -34,7 +34,7 @@ Servono Node con il pacchetto `docx` (`npm i -g docx` se manca), `pandoc` e Libr
 
 ## Scrivere per questi lettori
 
-Ragazzi con DSA e BES, percorsi brevi (MSNA): conta la chiarezza. Pratica prima, teoria dopo (metodo induttivo).
+Ragazzi con DSA e BES, percorsi brevi (MSNA): conta la chiarezza. Pratica prima, teoria dopo (metodo induttivo). Le regole complete di Oficina sono in `references/guida-formattazione.md`: leggila prima di scrivere o riscrivere un testo, soprattutto la parte "Stile di scrittura". Il layout dello script la applica già; dove se ne discosta, vale `references/layout-standard.md`.
 - Frasi brevi, un'idea per paragrafo; parole tecniche spiegate alla prima comparsa.
 - Termini chiave in **grassetto**; niente corsivo, MAIUSCOLO o sottolineature.
 - Procedure come elenchi numerati, un passaggio per voce.

@@ -30,10 +30,10 @@ const BASE_DIR = path.dirname(path.resolve(input));
 
 // ---------------------------------------------------------------- geometria (DXA: 567 = 1 cm)
 const PAGE_W = 11906, PAGE_H = 16838;        // A4
-const MARGIN = 720;                           // 1,27 cm: "Stretti" di Word
-const HF_DIST = 283;                          // 0,5 cm: intestazione e piè di pagina dal bordo
-const TEXT_W = PAGE_W - 2 * MARGIN;           // 10466 = 18,46 cm
-const TEXT_H = PAGE_H - 2 * MARGIN;           // 15398 = 27,2 cm
+const MARGIN = 1134;                          // 2 cm su tutti i lati: spazio per il logo, le note e i fori
+const HF_DIST = 709;                          // 1,25 cm: intestazione e piè di pagina dal bordo (come Word)
+const TEXT_W = PAGE_W - 2 * MARGIN;           // 9638 = 17 cm
+const TEXT_H = PAGE_H - 2 * MARGIN;           // 14570 = 25,7 cm
 const CM = 567, PX_PER_CM = 96 / 2.54;
 const MAX_IMG_H_CM = 12;                      // un'immagine + didascalia deve stare in pagina con un po' di testo
 const SPLIT_ABOVE_CM = 23;                    // oltre questa altezza stimata un esercizio può spezzarsi

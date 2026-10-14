@@ -4,7 +4,7 @@ Specifica da cui nasce `scripts/build_dispensa.js`. La skill formatta solo il co
 
 ## Pagina
 
-A4 (11906 × 16838), margini stretti 1,27 cm su tutti i lati ("Stretti" di Word), larghezza utile 18,46 cm. Una sola sezione, intestazione e piè di pagina vuoti.
+A4 (11906 × 16838), margini 2 cm su tutti i lati, larghezza utile 17 cm, altezza utile 25,7 cm. Intestazione e piè di pagina a 1,25 cm dal bordo: il logo che Oficina aggiunge a mano ci sta senza spostare il testo. Una sola sezione, intestazione e piè di pagina vuoti.
 
 ## Caratteri
 
@@ -36,7 +36,7 @@ Nero (testo, titoli, elenchi, bordi), bianco, blu `0057B8`, rosso `E30613`. Ness
 
 ## Immagini
 
-Centrate; larghezza massima 18,4 cm; altezza massima 12 cm; testo alternativo obbligatorio. Didascalia sotto con campo `SEQ Figura`; quella delle tabelle sta sopra con `SEQ Tabella`. Due immagini affiancate stanno in un solo paragrafo con una didascalia.
+Centrate; larghezza massima 17 cm; altezza massima 12 cm; testo alternativo obbligatorio. Didascalia sotto con campo `SEQ Figura`; quella delle tabelle sta sopra con `SEQ Tabella`. Due immagini affiancate stanno in un solo paragrafo con una didascalia.
 
 ## Riquadri
 
